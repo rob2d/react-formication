@@ -1,0 +1,45 @@
+{
+  "name": "react-formication",
+  "version": "0.0.3",
+  "description": "Simple, thoughtful and explicitly declarative HOC to create minimal, efficient, and painless dynamic input validation with your forms (pun intended).",
+  "main": "build/withForm.min.js",
+  "scripts": {
+    "pre-babel": "babel ./src --out-dir ./lib --source-maps --presets stage-2,es2015,react --plugins babel-plugin-add-module-exports,transform-class-properties",
+    "pre-browserify": "browserify ./lib/withForm.js -o ./build/withForm.js --standalone withForm --external react",
+    "pre-uglify" : "uglifyjs ./build/withForm.js --compress --mangle --output ./build/withForm.min.js --source-map",
+    "prepublish": "npm run pre-babel && npm run pre-browserify && npm run pre-uglify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserify-global-shim": {
+    "react": "React",
+    "react-dom": "ReactDOM"
+  },
+  "keywords": [
+    "react",
+    "form",
+    "hoc",
+    "redux",
+    "minimal",
+    "input",
+    "inputs",
+    "redux-form"
+  ],
+  "author": "Robert Concepcion III",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "browserify-global-shim": "^1.0.3"
+  },
+  "files": [
+    "build/"
+  ]
+}
