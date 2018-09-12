@@ -1,4 +1,4 @@
-#react-formication
+# react-formication
 
 Simple, thoughtful and explicitly declarative HOC to create dependency-free, efficient, and painless dynamic input validation with your forms (pun intended).
 
