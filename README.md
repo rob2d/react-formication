@@ -177,7 +177,7 @@ class MyFormLayout (props) {
     }
 }
 
-const MyForm = withForm(MyFormLayout)(formOptions);
+const MyForm = withForm(formOptions)(MyFormLayout);
 
 export default MyForm
 ```
