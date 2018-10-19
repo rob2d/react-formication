@@ -1,7 +1,7 @@
 import React, { Component, PureComponent } from 'react'
 
-function withForm (WrappedComponent) {
-    return ({ inputs }, asNonPure=false) => {
+function withForm ({ inputs }) {
+    return (WrappedComponent, asNonPure=false) => {
 
         /**
          * The namespace of the input which will
